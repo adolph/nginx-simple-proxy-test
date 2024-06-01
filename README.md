@@ -3,7 +3,7 @@
 
 ## Prerequisites
 
-- Docker (or equivalent)
+- Docker (or equivalent, need commands for 'docker' and 'docker-compose')
 - a terminal application and basic cli knowledge
 - curl
 - grep
