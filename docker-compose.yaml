@@ -1,0 +1,37 @@
+services:
+  proxy:
+    image: nginx:1.27.0
+    ports:
+      - "8070:80"
+    networks:
+      - my-network
+    volumes:
+     - ./proxy-conf/:/etc/nginx/conf.d/
+     - ./proxy-html/:/usr/share/nginx/html/
+
+  webapp:
+    image: nginx:1.27.0
+    ports:
+      - "8090:80"
+    networks:
+      - my-network
+    volumes:
+     - ./webapp-conf/:/etc/nginx/conf.d/
+     - ./webapp-html/:/usr/share/nginx/html/
+
+networks:
+  my-network:
+
+# ./webapp-html/index.html
+# ./webapp-html/50x.html
+# ./docker-compose.yaml
+# ./proxy.conf
+# ./Dockerfile
+# ./webapp.conf
+# ./proxy-html/index.html
+# ./proxy-html/50x.html
+# ./default.conf
+#  1098  find . -type f >> docker-compose.yaml
+#  1099  vim docker-compose.yaml
+#  1100  #docker cp proxy:/etc/nginx/conf.d/default.conf ./.
+#  1101  #docker cp proxy:/usr/share/nginx/html/50x.html webapp-html/
