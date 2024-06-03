@@ -1,6 +1,8 @@
 
 # nginx simple proxy test
 
+Based on nginx documentation [Beginner's Guide](https://nginx.org/en/docs/beginners_guide.html#conf_structure).
+
 ## Prerequisites
 
 - Docker (or equivalent, need commands for 'docker' and 'docker-compose')
